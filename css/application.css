@@ -1,0 +1,159 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+  font-family: "Yanone Kaffeesatz", serif;
+  font-size: 2.125em;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #eee;
+  background-color: #cccccc;
+  -webkit-box-shadow: 0px 9px 0px #db1f05, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  margin: 1%;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
+  .button:hover {
+    color: #fff; }
+  .button:active {
+    position: relative;
+    top: 6px;
+    color: #eee;
+    -webkit-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9); }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style-position: inside; }
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #c03; }
+
+::selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #c03; }
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font: normal normal 100%/1.5 "Droid Sans", sans-serif;
+  background: url("../images/background.png"); }
+
+.container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5% 3%; }
+
+header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 5% 2%; }
+  header .site-name {
+    font-size: 2.1875em;
+    line-height: 0.9375;
+    font-family: "Yanone Kaffeesatz", serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase; }
+
+.hit-area {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4) url("../images/target.gif") center center no-repeat;
+  border: 1px dotted #666666;
+  margin: 20px auto 0 auto;
+  padding: 25% 5%; }
+
+.event-logger {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  color: #c03;
+  margin-top: 20px; }
+
+.load-area {
+  text-align: center; }
+
+@media only screen and (min-width: 500px) {
+  .hit-area {
+    padding: 15% 5%; } }
+@media only screen and (min-width: 1000px) {
+  .container {
+    padding: 2% 3%; }
+
+  .hit-area {
+    padding: 10% 5%; }
+
+  header {
+    padding: 2% 2%; } }

@@ -1,0 +1,92 @@
+@viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport  { width: device-width; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img { max-width: 100%; }
+ul { list-style-position: inside; }
+
+::-moz-selection{ background: rgba(0,0,0, .3); color:#c03; }
+::selection { background: rgba(0,0,0, .3); color:#c03; }
+
+html {
+  height: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font: normal normal 100%/1.5 'Droid Sans', sans-serif;
+    background: url("../images/background.png");
+}
+
+.container {
+  @include border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5% 3%;
+}
+
+header {
+  @include border-box;
+  @include round-border(5px);
+  width: 100%;
+  background: rgba(0,0,0,0.15);
+  padding: 5% 2%;
+
+  .site-name {
+    @include font-size(35px, 16px, 15px);
+    font-family: 'Yanone Kaffeesatz', serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+  }
+}
+
+.hit-area {
+  @include border-box;
+  @include round-border(10px);
+  text-align: center;
+  background: rgba(255,255,255,0.4) url("../images/target.gif") center center no-repeat;
+  border: 1px dotted #666;
+  margin: 20px auto 0 auto;
+  padding: 25% 5%;
+}
+
+.event-logger {
+  @include font-size(16px, 16px);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  color: #c03;
+  margin-top: 20px;
+}
+
+.load-area {
+  text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .hit-area {
+    padding: 15% 5%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    padding: 2% 3%;
+  }
+
+  .hit-area {
+    padding: 10% 5%;
+  }
+  
+  header {
+    padding: 2% 2%;
+  }
+}

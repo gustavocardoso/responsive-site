@@ -1,0 +1,54 @@
+@mixin border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin round-border($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin font-size($font-size, $context, $line-height: 1.5) {
+  font-size: $font-size / $context +em;
+  @if $line-height != 1.5 {
+    line-height: $line-height / $context;
+  }
+}
+
+@mixin button {
+  @include border-box;
+  @include round-border(8px);
+  position: relative;
+  display: inline-block;
+  font-family: 'Yanone Kaffeesatz', serif;
+  @include font-size(34px, 16px);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #eee;
+  background-color: rgba(204,204,204,1);
+  -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+  padding: 8px 15px;
+  margin: 1%;
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:active {
+    position: relative;
+    top: 6px;
+    color: #eee;
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  }
+}
