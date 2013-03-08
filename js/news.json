@@ -1,0 +1,31 @@
+{
+  "type": "news",
+  "results": 5,
+  "news": [
+    {
+      "slug": "news-number-123",
+      "title": "News number one",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    },
+    {
+      "slug": "news-number-2",
+      "title": "News number two",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    },
+    {
+      "slug": "news-number-3",
+      "title": "News number three",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    },
+    {
+      "slug": "news-number-4",
+      "title": "News number four",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    },
+    {
+      "slug": "news-number-5",
+      "title": "News number five",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    }
+  ]
+} 

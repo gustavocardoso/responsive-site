@@ -1,0 +1,137 @@
+@viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport  { width: device-width; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img { max-width: 100%; }
+ul { list-style-position: inside; }
+
+::-moz-selection{ background: rgba(0,0,0, .3); color: $main-color; }
+::selection { background: rgba(0,0,0, .3); color: $main-color; }
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font: normal normal 100%/1.5 sans-serif;
+  background: url("../images/background.png");
+  color: #fff;
+}
+
+.container {
+  @include border-box;
+  width: 95%;
+  margin: 5% auto;
+  padding: 0 2% 6% 2%;
+}
+
+.site-name {
+  display: inline-block;
+  font-family: $main-font;
+  font-weight: 400;
+  padding: 0 0 5px 0;
+
+  .site-link {
+    @include font-size(46px, 16px);
+    color: #fff;
+    text-decoration: none;
+    @include text-shadow(2px, 2px, 4px, 'black', 0.5);
+
+    span {
+      @include font-size(12px, 16px, 0px);
+      color: $main-color;
+      letter-spacing: 4px;
+      border-bottom: 1px dotted darken($main-color, 20%);
+    }
+  }
+}
+
+.banner {
+  @include border-box;
+  border: 5px solid #fff;
+  margin-top: 29px;
+  -webkit-transform: rotate(-2deg);
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.5s ease-in;
+
+  &.activated {
+    -webkit-filter: grayscale(0);
+  }
+}
+
+.navigation {
+  @include font-size(20px, 16px);
+  list-style: none;
+  margin-top: 20px;
+
+  .menu-item {
+    @include border-box;
+    @include round-border(5px);
+    display: block;
+    font-family: $header-font;
+    color: #fff;
+    text-decoration: none;
+    @include text-shadow(2px, 2px, 4px, 'black', 0.5);
+    background: rgba(0,0,0,0.2) url("../images/ico-menu-red.png");
+    background-repeat: no-repeat;
+    background-position: 4% center;
+    background-size: 7%;
+    margin-bottom: 10px;
+    padding: 5% 14%;
+  }
+}
+
+.content {
+  .page-title {
+    font-family: $header-font;
+    @include font-size(30px, 16px);
+    @include text-shadow(2px, 2px, 4px, 'black', 0.5);
+    margin: 4% 0 6% 0;
+  }
+
+  p {
+    @include font-size(18px, 16px, 27px);
+    margin-bottom: 6%;  
+
+    &.pull {
+      color: #666;
+      margin: 0;
+    }  
+  }
+
+  img {
+    @include border-box;
+    border: 5px solid #fff;
+    margin-bottom: 4%;
+  }
+}
+
+footer {
+  @include border-box;
+  font-family: $main-font;
+  @include font-size(20px, 16px);
+  color: #999;
+  
+  padding: 5%;
+
+  a {
+    color: $main-color;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+
+}
+
+@media only screen and (min-width: 1000px) {
+  
+}

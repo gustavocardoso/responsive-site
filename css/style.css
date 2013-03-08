@@ -1,0 +1,31 @@
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style-position: inside; }
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #c03; }
+
+::selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #c03; }
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font: normal normal 100%/1.5 "Droid Sans", sans-serif;
+  background: #ccc; }
+
+.container {
+  width: 100%;
+  margin: 0 auto; }

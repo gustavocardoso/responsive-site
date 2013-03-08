@@ -1,0 +1,68 @@
+@mixin border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin round-border($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin font-size($font-size, $context, $line-height: 1.5) {
+  font-size: $font-size / $context +em;
+  @if $line-height != 1.5 {
+    line-height: $line-height / $context;
+  }
+}
+
+@mixin button($color: $function-color, $font-color: #fff) {
+  @include border-box;
+  @include round-border(8px);
+  position: relative;
+  display: inline-block;
+  font-family: $main-font;
+  text-decoration: none;
+  color: $font-color;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+  background-color: rgba($color, 1);
+  -webkit-box-shadow: 0px 9px 0px rgba(darken($color, 20%),1), 0px 9px 25px rgba(0,0,0,.7);
+  padding: 8px 15px;
+  margin: 1%;
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+
+  &:hover {
+    color: $font-color;
+    background-color: lighten(rgba($color, 1), 2%);
+  }
+
+  &:active {
+    position: relative;
+    top: 6px;
+    color: $font-color;
+    background-color: rgba($color, 1);
+    text-shadow: none;
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  }
+
+  &.disabled {
+    background-color: #ccc;
+  }
+}
+
+@mixin text-shadow($x, $y, $size, $color, $opacity: 1) {
+  @if $color == 'black' {
+    $color: rgba(0,0,0,$opacity);
+  } @elseif $color == 'white' {
+    $color: rgba(255,255,255,$opacity);
+  }
+  text-shadow: 2px 2px 4px $color;
+}

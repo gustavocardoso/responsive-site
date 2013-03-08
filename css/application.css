@@ -1,0 +1,200 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+  font-family: "Grand Hotel", cursive;
+  text-decoration: none;
+  color: #cccccc;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  background-color: #cc3300;
+  -webkit-box-shadow: 0px 9px 0px #661a00, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  padding: 8px 15px;
+  margin: 1%;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  font-size: 1.75em;
+  font-weight: normal;
+  margin-bottom: 20px; }
+  .button:hover {
+    color: #cccccc;
+    background-color: #d63600; }
+  .button:active {
+    position: relative;
+    top: 6px;
+    color: #cccccc;
+    background-color: #cc3300;
+    text-shadow: none;
+    -webkit-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9); }
+
+@viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style-position: inside; }
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #cc0033; }
+
+::selection {
+  background: rgba(0, 0, 0, 0.3);
+  color: #cc0033; }
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font: normal normal 100%/1.5 sans-serif;
+  background: url("../images/background.png");
+  color: #fff; }
+
+.container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 95%;
+  margin: 5% auto;
+  padding: 0 2% 6% 2%; }
+
+.site-name {
+  display: inline-block;
+  font-family: "Grand Hotel", cursive;
+  font-weight: 400;
+  padding: 0 0 5px 0; }
+  .site-name .site-link {
+    font-size: 2.875em;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+    .site-name .site-link span {
+      font-size: 0.75em;
+      line-height: 0;
+      color: #cc0033;
+      letter-spacing: 4px;
+      border-bottom: 1px dotted #660019; }
+
+.banner {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 5px solid white;
+  margin-top: 29px;
+  -webkit-transform: rotate(-2deg);
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.5s ease-in; }
+  .banner.activated {
+    -webkit-filter: grayscale(0); }
+
+.navigation {
+  font-size: 1.25em;
+  list-style: none;
+  margin-top: 20px; }
+  .navigation .menu-item {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    font-family: "Poiret One", cursive;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2) url("../images/ico-menu-red.png");
+    background-repeat: no-repeat;
+    background-position: 4% center;
+    background-size: 7%;
+    margin-bottom: 10px;
+    padding: 5% 14%; }
+
+.content .page-title {
+  font-family: "Poiret One", cursive;
+  font-size: 1.875em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 4% 0 6% 0; }
+.content p {
+  font-size: 1.125em;
+  line-height: 1.6875;
+  margin-bottom: 6%; }
+  .content p.pull {
+    color: #666;
+    margin: 0; }
+.content img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 5px solid white;
+  margin-bottom: 4%; }
+
+footer {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Grand Hotel", cursive;
+  font-size: 1.25em;
+  color: #999;
+  padding: 5%; }
+  footer a {
+    color: #cc0033;
+    text-decoration: none; }
