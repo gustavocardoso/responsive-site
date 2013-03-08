@@ -54,7 +54,14 @@
   }
 
   &.disabled {
-    background-color: #ccc;
+    color: #333;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 9px 0px rgba(0,0,0,0.7), 0px 9px 25px rgba(0,0,0,.7);
+
+    &:active {
+      position: relative;
+      top: 0;
+    }
   }
 }
 

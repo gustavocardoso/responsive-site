@@ -18,6 +18,71 @@ time, mark, audio, video {
   vertical-align: baseline;
   background: transparent; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.4; }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    opacity: 1; }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    opacity: 0.4; } }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+    opacity: 0.4; }
+
+  50% {
+    -moz-transform: rotate(180deg);
+    opacity: 1; }
+
+  to {
+    -moz-transform: rotate(360deg);
+    opacity: 0.4; } }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+    opacity: 0.4; }
+
+  50% {
+    -ms-transform: rotate(180deg);
+    opacity: 1; }
+
+  to {
+    -ms-transform: rotate(360deg);
+    opacity: 0.4; } }
+
+@-o-keyframes spin {
+  from {
+    -o-transform: rotate(0deg);
+    opacity: 0.4; }
+
+  50% {
+    -o-transform: rotate(180deg);
+    opacity: 1; }
+
+  to {
+    -o-transform: rotate(360deg);
+    opacity: 0.4; } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 0.2; }
+
+  50% {
+    transform: rotate(180deg);
+    opacity: 1; }
+
+  to {
+    transform: rotate(360deg);
+    opacity: 0.2; } }
+
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -29,6 +94,21 @@ time, mark, audio, video {
 
 .clearfix {
   zoom: 1; }
+
+.ajax-loader {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 8px solid white;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  margin: 0 0 20px 20px;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  -ms-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite; }
 
 .button {
   -moz-box-sizing: border-box;
@@ -68,6 +148,13 @@ time, mark, audio, video {
     -webkit-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
     -moz-box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 3px 0px #db1f05, 0px 3px 6px rgba(0, 0, 0, 0.9); }
+  .button.disabled {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 9px 0px rgba(0, 0, 0, 0.7), 0px 9px 25px rgba(0, 0, 0, 0.7); }
+    .button.disabled:active {
+      position: relative;
+      top: 0; }
 
 @viewport {
   width: device-width; }

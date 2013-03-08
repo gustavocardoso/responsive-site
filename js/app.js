@@ -44,6 +44,11 @@ Zepto(function($){
       }
     });
   });
+
+  $(document).on('ajaxStart', function() {
+    $('.ajax-action').addClass('disabled');
+    $('.ajax-action').before('<div class="ajax-loader"></div>');
+  });
 });
 
 (function( win ){
