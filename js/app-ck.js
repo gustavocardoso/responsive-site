@@ -1,1 +1,0 @@
-function getEl(e){return document.querySelector(e)}window.onload=function(){var e=getEl(".hit-area");alert(e)};
