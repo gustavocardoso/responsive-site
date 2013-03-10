@@ -14,7 +14,14 @@ function setEvents(target, logger) {
   });
 }
 
+function getOrientation() {
+  window.onorientationchange = function() {
+    alert(window.orientation);
+  }
+}
+
 Zepto(function($){
+  getOrientation();
   var banner = getEl('.banner');
   var body = getEl('body');
   
@@ -34,9 +41,18 @@ Zepto(function($){
       url: 'js/news.json',
       success: function(data) {
         var news = data.news;
-        $.each(news, function(key, value){
-          
+        var newsList = "";
+        var listOdd;
+
+        $.each(news, function(index, newsItem){
+          if(index % 2 == 1){
+            listOdd = " class='odd'";
+          }else {
+            listOdd = "";
+          }
+          newsList += "<li"+ listOdd +"><h2><a href='"+ newsItem.slug +"' class='news-title' title='"+ newsItem.title +"'>"+ newsItem.title +"</a></h2><p class='news-subtitle'>"+ newsItem.subtitle+"</p></li>";
         });
+        $('.news-list').append(newsList);
       },
       error: function(xhr, type) {
         console.log("Erro: "+ xhr.statusText +" | Status code: "+ xhr.status);
