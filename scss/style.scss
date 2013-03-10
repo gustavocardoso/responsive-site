@@ -9,6 +9,10 @@ footer, header, hgroup, menu, nav, section {
 
 img { max-width: 100%; }
 ul { list-style-position: inside; }
+p {
+  @include font-size(18px, 16px, 27px);
+  margin-bottom: 6%;
+}
 
 ::-moz-selection{ background: rgba(0,0,0, .3); color: $main-color; }
 ::selection { background: rgba(0,0,0, .3); color: $main-color; }
@@ -97,20 +101,42 @@ body {
     margin: 4% 0 6% 0;
   }
 
-  p {
-    @include font-size(18px, 16px, 27px);
-    margin-bottom: 6%;  
-
-    &.pull {
-      color: #666;
-      margin: 0;
-    }  
-  }
-
   img {
     @include border-box;
     border: 5px solid #fff;
     margin-bottom: 4%;
+  }
+}
+
+.news-list {
+  list-style: none;
+
+  li {
+    background: rgba(0,0,0,0.2);
+    @include round-border(5px);
+    margin-bottom: 8%;
+    padding: 4%;
+
+    &.odd {
+      background: rgba(255,255,255,0.03);
+
+      .news-title {
+        @include text-shadow(1px, 1px, 2px, 'black', 0.5);
+      }
+    }
+  }
+  
+  .news-title {
+    @include font-size(20px, 16px);
+    color: $main-color;
+    text-decoration: none;
+    border-bottom: 1px dotted $main-color;
+  }
+
+  .news-subtitle {
+    @include font-size(18px, 16px, 18px);
+    color: #ccc;
+    margin: 2% 0 0 0;
   }
 }
 
