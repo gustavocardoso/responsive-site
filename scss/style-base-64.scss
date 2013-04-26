@@ -104,7 +104,7 @@ body {
   }
 }
 
-.banner {
+.banner img {
   @include border-box;
   border: 5px solid #fff;
   margin-top: 29px;
@@ -258,7 +258,7 @@ footer {
 
   .container {
     width: 90%;
-    margin: 3% auto 5% auto;
+    margin: 2% auto 5% auto;
     padding: 0 2% 6% 2%;
   }
 
@@ -281,7 +281,7 @@ footer {
   .navigation {
     width: 40%;
     @include font-size(24px, 16px);
-    margin: 0;
+    margin: 15px 0 0 0;
     float: left;
 
     .menu-item {
@@ -297,6 +297,7 @@ footer {
     @include round-border(5px);
     background: rgba(0,0,0,0.5);
     padding: 1% 2%;
+    margin-top: 30px;
 
     p {
       margin: 0;

@@ -6,6 +6,11 @@
   <title>HTML Tests!</title>
   <link href='http://fonts.googleapis.com/css?family=Grand+Hotel|Poiret+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/application.css" media="screen">
+  <script type="text/javascript" src="js/picturefill.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
   <nav class="sub-nav">
@@ -27,7 +32,19 @@
       </h1>
     </header>
     <div class="content clearfix">
-      <img src="images/scarlett/scarlett_01.jpg" alt="Scarlett Johansson" class="banner">
+      <div data-picture data-alt="Scarlett Johansson" class="banner">
+        <div data-src="images/scarlett/scarlett_01@phone.jpg"></div>
+        <div data-src="images/scarlett/scarlett_01@tablet.jpg" data-media="(min-width: 500px)"></div>
+        <div data-src="images/scarlett/scarlett_01.jpg" data-media="(min-width: 800px)"></div>
+        <div data-src="images/scarlett/scarlett_01@2x.jpg" data-media="(-webkit-min-device-pixel-ratio: 1.5)"></div>
+        <div data-src="images/scarlett/scarlett_01@2x.jpg" data-media="(min-device-pixel-ratio: 1.5)"></div>
+
+        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+        <noscript>
+          <img src="images/scarlett/scarlett_01@phone.jpg" alt="Scarlett Johansson">
+        </noscript>
+      </div>
+
       <nav class="main-navigation">
         <ul class="navigation">
           <li><a href="about.html" title="Item do menu" class="menu-item">Sobre nós</a></li>

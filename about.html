@@ -6,6 +6,11 @@
   <title>HTML Tests!</title>
   <link href='http://fonts.googleapis.com/css?family=Grand+Hotel|Poiret+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/application.css" media="screen">
+  <script type="text/javascript" src="js/picturefill.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
   <nav class="sub-nav">
@@ -32,7 +37,18 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt fugit recusandae commodi quia deleniti dolorum illo mollitia ad nesciunt numquam nostrum vitae quam dolores eaque sequi officiis dolorem. Sequi sit.
       </p>
       
-      <img src="images/scarlett/scarlett_02.jpg" alt="Scarlett Johansson" class="banner">
+      <div data-picture data-alt="Scarlett Johansson" class="banner">
+        <div data-src="images/scarlett/scarlett_02@phone.jpg"></div>
+        <div data-src="images/scarlett/scarlett_02@tablet.jpg" data-media="(min-width: 500px)"></div>
+        <div data-src="images/scarlett/scarlett_02.jpg" data-media="(min-width: 800px)"></div>
+        <div data-src="images/scarlett/scarlett_02@2x.jpg" data-media="(-webkit-min-device-pixel-ratio: 1.5)"></div>
+        <div data-src="images/scarlett/scarlett_02@2x.jpg" data-media="(min-device-pixel-ratio: 1.5)"></div>
+
+        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+        <noscript>
+          <img src="images/scarlett/scarlett_02@phone.jpg" alt="Scarlett Johansson">
+        </noscript>
+      </div>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt fugit recusandae commodi quia deleniti dolorum illo mollitia ad nesciunt numquam nostrum vitae quam dolores eaque sequi officiis dolorem. Sequi sit.

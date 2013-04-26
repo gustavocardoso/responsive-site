@@ -253,7 +253,7 @@ body {
       letter-spacing: 4px;
       border-bottom: 1px dotted #660019; }
 
-.banner {
+.banner img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -262,7 +262,7 @@ body {
   -webkit-transform: rotate(-2deg);
   -webkit-filter: grayscale(100%);
   -webkit-transition: -webkit-filter 0.5s ease-in; }
-  .banner.activated {
+  .banner img.activated {
     -webkit-filter: grayscale(0); }
 
 .navigation {
@@ -379,7 +379,7 @@ footer {
 
   .container {
     width: 90%;
-    margin: 3% auto 5% auto;
+    margin: 2% auto 5% auto;
     padding: 0 2% 6% 2%; }
 
   .site-name .site-link {
@@ -395,7 +395,7 @@ footer {
   .navigation {
     width: 40%;
     font-size: 1.5em;
-    margin: 0;
+    margin: 15px 0 0 0;
     float: left; }
     .navigation .menu-item {
       background-size: 5.5%;
@@ -410,7 +410,8 @@ footer {
     -o-border-radius: 5px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.5);
-    padding: 1% 2%; }
+    padding: 1% 2%;
+    margin-top: 30px; }
     footer p {
       margin: 0; } }
 @media only screen and (max-width: 46em) {
